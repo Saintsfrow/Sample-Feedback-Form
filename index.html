@@ -7,30 +7,37 @@
         <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
     </head>
     <body>
-    <div class="container">
-        <form>
-            <h1 align="center">Feedback Form</h1>
-            <div class="input-group">
-                <label>Full Name</label>
-                <input type="text" placeholder="Enter your Name here">
-            </div>
+        <div class="container">
+            <form>
+                <h1 align="center">Feedback Form</h1>
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter your Name here" id="contact-name" onkeyup="validateName()">
+                    <span id="name-error"></span>
+                </div>
 
-            <div class="input-group">
-                <label>Mobile Number</label>
-                <input type="tel" placeholder="Enter your Mobile Number here">
-            </div>
+                <div class="input-group">
+                    <label>Mobile Number</label>
+                    <input type="tel" placeholder="Enter your Mobile Number here" id="contact-mobile" onkeyup="validateMobile()">
+                    <span id="mobile-error"></span>
+                </div>
 
-            <div class="input-group">
-                <label>Email Id</label>
-                <input type="email" placeholder="Enter your Email here">
-            </div>   
+                <div class="input-group">
+                    <label>Email ID</label>
+                    <input type="email" placeholder="Enter your Email here" id="contact-email" onkeyup="validateEmail()">
+                    <span id="email-error"></span>
+                </div>   
 
-            <div class="input-group">
-                <label>Feedback</label>
-                <textarea rows="5" placeholder="Give your suggestions here"></textarea>
-            </div>
+                <div class="input-group">
+                    <label>Feedback</label>
+                    <textarea rows="5" placeholder="Give your suggestions here" id="contact-feedback" onkeyup="validateFeedback()"></textarea>
+                    <span id="feedback-error"></span>
+                </div>
 
-            <button>Submit</button>   
-        </form>
+                <button onclick="return validateForm()">Submit</button>   
+                <span id="submit-error"></span>
+            </form>
+        </div>
+        <script src="script.js"></script>
     </body>
 </html>

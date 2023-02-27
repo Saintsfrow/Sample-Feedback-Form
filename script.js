@@ -7,6 +7,8 @@ var submitError = document.getElementById('submit-error');
 function validateName()
 {
     var name = document.getElementById('contact-name').value;
+    nameError.style.display = 'block';
+    setTimeout(function(){nameError.style.display = 'none';},3000);
     if(name.length == 0)
     {
         nameError.innerHTML = 'Name is required';
@@ -24,6 +26,8 @@ function validateName()
 function validateMobile()
 {
     var mobile = document.getElementById('contact-mobile').value;
+    mobileError.style.display = 'block';
+    setTimeout(function(){mobileError.style.display = 'none';},3000);
     if(mobile.length == 0)
     {
         mobileError.innerHTML = 'Mobile Number is required';
@@ -46,6 +50,8 @@ function validateMobile()
 function validateEmail()
 {
     var email = document.getElementById('contact-email').value;
+    emailError.style.display = 'block';
+    setTimeout(function(){emailError.style.display = 'none';},3000);
     if(email.length == 0)
     {
         emailError.innerHTML = 'Email is required';
@@ -65,6 +71,8 @@ function validateFeedback()
     var feedback = document.getElementById('contact-feedback').value;
     var required = 10;
     var left = required - feedback.length;
+    feedbackError.style.display = 'block';
+    setTimeout(function(){feedbackError.style.display = 'none';},3000);
     if(left > 0)
     {
         feedbackError.innerHTML = left + ' more characters is required';
@@ -83,5 +91,4 @@ function validateForm()
         setTimeout(function(){submitError.style.display = 'none';},3000);
         return false;
     }
-
 }
